@@ -13,4 +13,7 @@ contract TanToken is ERC20 { //Extend the ERC20 token properties to our own toke
     function burnHT(address add, uint256 value) public{
         _burn(add, value);
     }
+    function transferHT(address from, address to, uint256 value) public{
+        transferFrom(from, to , value);
+    }
 }
